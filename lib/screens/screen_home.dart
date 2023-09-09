@@ -1,4 +1,4 @@
-import 'package:app_ui/Camera/camera_screen.dart';
+import 'package:app_ui/screens/Camera/camera_screen.dart';
 import 'package:app_ui/core/constent.dart';
 import 'package:app_ui/screens/additional_info/additional_information.dart';
 import 'package:app_ui/screens/catalogue/catalogue.dart';
