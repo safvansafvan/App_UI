@@ -11,8 +11,7 @@ class ManageStore extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: const Center(child: Text('Manage Store')),
       ),
-      body: SafeArea(
-          child: Padding(
+      body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 1),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -48,7 +47,7 @@ class ManageStore extends StatelessWidget {
           },
           itemCount: 7,
         ),
-      )),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (value) {},
         type: BottomNavigationBarType.fixed,
