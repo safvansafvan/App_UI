@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../Products/catagories.dart';
-import '../Products/product_screen.dart';
+import '../products/catagories.dart';
+import '../products/product_screen.dart';
 
 class Catalogue extends StatelessWidget {
   const Catalogue({super.key});
@@ -12,6 +11,11 @@ class Catalogue extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(Icons.arrow_back)),
           actions: <Widget>[
             IconButton(
               onPressed: () {},

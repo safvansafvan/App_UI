@@ -1,3 +1,4 @@
+import 'package:app_ui/core/constent.dart';
 import 'package:flutter/material.dart';
 
 class AdditionalInformation extends StatefulWidget {
@@ -14,7 +15,7 @@ class _AdditionalInformationState extends State<AdditionalInformation> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Additional information'),
+        title: const Text('Additional information'),
       ),
       body: Column(
         children: [
@@ -68,9 +69,7 @@ class _AdditionalInformationState extends State<AdditionalInformation> {
                       fontWeight: FontWeight.w600,
                       fontSize: 20),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                kheightTen,
                 Text(
                   '2.4.2',
                   style: TextStyle(color: Colors.grey[800]),
@@ -78,9 +77,6 @@ class _AdditionalInformationState extends State<AdditionalInformation> {
               ],
             ),
           ),
-          SizedBox(
-            height: 30,
-          )
         ],
       ),
     );

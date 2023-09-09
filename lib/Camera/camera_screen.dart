@@ -25,7 +25,7 @@ class _CameraScreenState extends State<CameraScreen> {
           ),
         ),
         body: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: ValueListenableBuilder(
               valueListenable: db,
               builder: (context, List data, text) {

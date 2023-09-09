@@ -1,5 +1,6 @@
+import 'package:app_ui/core/constent.dart';
 import 'package:flutter/material.dart';
-import '../Lists/list_catalogue.dart';
+import '../../core/Lists/list_catalogue.dart';
 
 class Payments extends StatelessWidget {
   const Payments({super.key});
@@ -43,22 +44,16 @@ class Payments extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
+                        kheightTen,
                         const Text(
                             'A tree limit upn to which you will receive'),
                         const Text('the online payments directly in your bank'),
-                        const SizedBox(
-                          height: 10,
-                        ),
+                        kheightTen,
                         LinearProgressIndicator(
                           value: 0.25,
                           color: Colors.blue[900],
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
+                        kheightTen,
                         const Text(
                           '36,668 left out of ₹50,000',
                           style: TextStyle(
@@ -67,9 +62,7 @@ class Payments extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
+                        kheightTen,
                         Container(
                           height: 35,
                           width: 125,
@@ -142,33 +135,32 @@ class Payments extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                        height: 90,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          color: Colors.amber[900],
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                'AMOUNT ON HOLD',
+                      height: 90,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        color: Colors.amber[900],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(15),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'AMOUNT ON HOLD',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 12),
+                            ),
+                            kheightTen,
+                            const Text('₹0',
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 12),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text('₹0',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20)),
-                            ],
-                          ),
-                        )),
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                      ),
+                    ),
                     Container(
                         height: 90,
                         width: 150,
@@ -179,20 +171,20 @@ class Payments extends StatelessWidget {
                           padding: const EdgeInsets.all(15),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
+                            children: [
+                              const Text(
                                 'AMOUNT RECEIVED',
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 12),
                               ),
-                              SizedBox(
-                                height: 10,
+                              kheightTen,
+                              const Text(
+                                '₹13,332',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20),
                               ),
-                              Text('₹13,332',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20)),
                             ],
                           ),
                         )),
@@ -209,8 +201,6 @@ class Payments extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      height: 30,
-                      width: 80,
                       decoration: BoxDecoration(
                           color: Colors.grey[350],
                           borderRadius: BorderRadius.circular(30)),
@@ -222,8 +212,6 @@ class Payments extends StatelessWidget {
                           )),
                     ),
                     Container(
-                        height: 30,
-                        width: 130,
                         decoration: BoxDecoration(
                             color: Colors.blue[900],
                             borderRadius: BorderRadius.circular(30)),
@@ -234,8 +222,6 @@ class Payments extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ))),
                     Container(
-                      height: 30,
-                      width: 80,
                       decoration: BoxDecoration(
                           color: Colors.grey[350],
                           borderRadius: BorderRadius.circular(30)),
@@ -250,9 +236,8 @@ class Payments extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                color: Colors.white,
-                height: 1300,
+              SizedBox(
+                height: 1200,
                 child: ListView.separated(
                   itemBuilder: (context, index) {
                     return ListTile(
@@ -298,8 +283,8 @@ class Payments extends StatelessWidget {
                                     fontWeight: FontWeight.w600,
                                     color: Colors.blue),
                               ),
-                              Wrap(
-                                children: const [
+                              const Wrap(
+                                children: [
                                   Padding(
                                     padding: EdgeInsets.all(2),
                                     child: Icon(

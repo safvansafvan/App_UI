@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
-import '../Lists/list_catalogue.dart';
+import '../../core/Lists/list_catalogue.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});
@@ -28,7 +25,7 @@ class _ProductScreenState extends State<ProductScreen> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
                       SizedBox(
@@ -99,11 +96,11 @@ class _ProductScreenState extends State<ProductScreen> {
                       const Divider(
                         thickness: 1,
                       ),
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Wrap(
-                            children: const [
+                            children: [
                               Icon(Icons.share_outlined),
                               SizedBox(
                                 width: 10,

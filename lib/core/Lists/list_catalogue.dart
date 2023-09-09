@@ -2,7 +2,6 @@ List<String> imagelisttile = [
   'assets/images/image1.jpg',
   'assets/images/image2.jpg',
   'assets/images/image3.jpg',
-
   'assets/images/image1.jpg',
   'assets/images/image2.jpg',
   'assets/images/image3.jpg',
@@ -15,7 +14,6 @@ List<String> imagelisttile = [
   'assets/images/image1.jpg',
   'assets/images/image2.jpg',
   'assets/images/image3.jpg',
-  
 ];
 List<String> listtiletitle = [
   'Order #1688068',
@@ -139,4 +137,3 @@ List<bool> switched = [
   false,
   false,
 ];
-

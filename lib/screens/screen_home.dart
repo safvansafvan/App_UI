@@ -1,10 +1,11 @@
 import 'package:app_ui/Camera/camera_screen.dart';
-import 'package:app_ui/screens/Widgets/additional_information.dart';
-import 'package:app_ui/screens/Widgets/catalogue.dart';
-import 'package:app_ui/screens/Widgets/dukaann_premium.dart';
-import 'package:app_ui/screens/Widgets/manage_store.dart';
-import 'package:app_ui/screens/Widgets/order.dart';
-import 'package:app_ui/screens/Widgets/payments.dart';
+import 'package:app_ui/core/constent.dart';
+import 'package:app_ui/screens/additional_info/additional_information.dart';
+import 'package:app_ui/screens/catalogue/catalogue.dart';
+import 'package:app_ui/screens/dukaan_premium/dukaann_premium.dart';
+import 'package:app_ui/screens/manage_store/manage_store.dart';
+import 'package:app_ui/screens/order/order.dart';
+import 'package:app_ui/screens/payments/payments.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,103 +14,94 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pink[200],
+      backgroundColor: bg,
       appBar: AppBar(
+        backgroundColor: bg,
         automaticallyImplyLeading: false,
-        title: const Text('first App'),
+        title: const Text('APP UI '),
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 130,
-            ),
-            SizedBox(
-              height: 50,
-              width: 200,
-              child: ElevatedButton(
-                child: const Text('Manage Store'),
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                        builder: ((context) => const ManageStore())),
-                  );
-                },
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 50,
+                width: 200,
+                child: ElevatedButton(
+                  child: const Text('Manage Store'),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: ((context) => const ManageStore())),
+                    );
+                  },
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            SizedBox(
-                height: 50,
-                width: 200,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: ((context) => const Payments())),
-                      );
-                    },
-                    child: const Text('Payments'))),
-            const SizedBox(
-              height: 20,
-            ),
-            SizedBox(
-                height: 50,
-                width: 200,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: ((context) => const DukaanPremium())),
-                      );
-                    },
-                    child: const Text('Dukaan Premium'))),
-            const SizedBox(
-              height: 20,
-            ),
-            SizedBox(
-                height: 50,
-                width: 200,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: ((context) => const Orders())),
-                      );
-                    },
-                    child: const Text('Orders'))),
-            const SizedBox(
-              height: 20,
-            ),
-            SizedBox(
-                height: 50,
-                width: 200,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: ((context) => const Catalogue())),
-                      );
-                    },
-                    child: const Text('Catalogue'))),
-            const SizedBox(
-              height: 20,
-            ),
-            SizedBox(
-                height: 50,
-                width: 200,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: ((context) =>
-                                const AdditionalInformation())),
-                      );
-                    },
-                    child: const Text('Additional Information'))),
-          ],
+              kheight,
+              SizedBox(
+                  height: 50,
+                  width: 200,
+                  child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: ((context) => const Payments())),
+                        );
+                      },
+                      child: const Text('Payments'))),
+              kheight,
+              SizedBox(
+                  height: 50,
+                  width: 200,
+                  child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: ((context) => const DukaanPremium())),
+                        );
+                      },
+                      child: const Text('Dukaan Premium'))),
+              kheight,
+              SizedBox(
+                  height: 50,
+                  width: 200,
+                  child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: ((context) => const Orders())),
+                        );
+                      },
+                      child: const Text('Orders'))),
+              kheight,
+              SizedBox(
+                  height: 50,
+                  width: 200,
+                  child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: ((context) => const Catalogue())),
+                        );
+                      },
+                      child: const Text('Catalogue'))),
+              kheight,
+              SizedBox(
+                  height: 50,
+                  width: 200,
+                  child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: ((context) =>
+                                  const AdditionalInformation())),
+                        );
+                      },
+                      child: const Text('Additional Information'))),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(

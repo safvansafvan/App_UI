@@ -58,12 +58,11 @@ List<Container> iconContainer = [
       color: Colors.white,
     ),
   ),
-  
   Container(
     height: 50,
     width: 50,
     decoration: BoxDecoration(
-      color: Color.fromARGB(255, 76, 175, 149),
+      color: const Color.fromARGB(255, 76, 175, 149),
       borderRadius: BorderRadius.circular(10),
     ),
     child: const Icon(
@@ -108,7 +107,7 @@ List<Container> iconContainer = [
           height: 50,
           width: 50,
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 233, 30, 108),
+            color: const Color.fromARGB(255, 233, 30, 108),
             borderRadius: BorderRadius.circular(10),
           ),
           child: const Icon(

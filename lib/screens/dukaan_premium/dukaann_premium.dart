@@ -1,6 +1,5 @@
+import 'package:app_ui/core/constent.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class DukaanPremium extends StatelessWidget {
   const DukaanPremium({super.key});
@@ -51,12 +50,10 @@ class DukaanPremium extends StatelessWidget {
                                 radius: 25,
                                 child: Icon(Icons.store),
                               ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Column(
+                              kheightTen,
+                              const Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                children: const [
+                                children: [
                                   Text(
                                     'dukaan®',
                                     style: TextStyle(
@@ -461,13 +458,13 @@ class DukaanPremium extends StatelessWidget {
                     border: Border.all(
                       color: Colors.grey,
                     ),
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(8),
                     ),
                   ),
-                  child: Column(
+                  child: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Icon(Icons.chat_bubble_outline),
                       SizedBox(
                         height: 10,
@@ -476,7 +473,7 @@ class DukaanPremium extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Container(
@@ -487,13 +484,13 @@ class DukaanPremium extends StatelessWidget {
                     border: Border.all(
                       color: Colors.grey,
                     ),
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(10),
                     ),
                   ),
-                  child: Column(
+                  child: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Icon(Icons.call_outlined),
                       SizedBox(
                         height: 10,
@@ -513,7 +510,7 @@ class DukaanPremium extends StatelessWidget {
           Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 10),
+                padding: const EdgeInsets.only(left: 10),
                 child: SizedBox(
                   width: 160,
                   child: TextButton(
@@ -525,7 +522,7 @@ class DukaanPremium extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(2),
+                padding: const EdgeInsets.all(2),
                 child: Container(
                   width: 180,
                   decoration: const BoxDecoration(

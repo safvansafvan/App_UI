@@ -1,6 +1,5 @@
+import 'package:app_ui/core/constent.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Orders extends StatelessWidget {
   const Orders({super.key});
@@ -17,10 +16,10 @@ class Orders extends StatelessWidget {
           padding: const EdgeInsets.all(20.0),
           child: ListView(
             children: [
-              ListTile(
-                title: const Text('May 31,05:42 PM'),
+              const ListTile(
+                title: Text('May 31,05:42 PM'),
                 trailing: Wrap(
-                  children: const [
+                  children: [
                     CircleAvatar(
                       radius: 7,
                     ),
@@ -39,8 +38,8 @@ class Orders extends StatelessWidget {
               const Divider(
                 thickness: 1,
               ),
-              Padding(
-                  padding: const EdgeInsets.only(top: 10),
+              const Padding(
+                  padding: EdgeInsets.only(top: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -51,7 +50,7 @@ class Orders extends StatelessWidget {
                             color: Color.fromARGB(255, 120, 113, 113)),
                       ),
                       Row(
-                        children: const [
+                        children: [
                           Icon(
                             Icons.list_alt_outlined,
                             color: Colors.indigo,
@@ -70,11 +69,11 @@ class Orders extends StatelessWidget {
                     ],
                   )),
               Padding(
-                padding: EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 20),
                 child: Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(bottom: 15),
+                      padding: const EdgeInsets.only(bottom: 15),
                       child: SizedBox(
                         height: 90,
                         width: 60,
@@ -117,7 +116,7 @@ class Orders extends StatelessWidget {
                               width: 25,
                               height: 25,
                               decoration: BoxDecoration(
-                                color: Color.fromRGBO(184, 202, 218, 1),
+                                color: const Color.fromRGBO(184, 202, 218, 1),
                                 border: Border.all(
                                   color: Colors.indigo,
                                 ),
@@ -146,9 +145,9 @@ class Orders extends StatelessWidget {
                     const SizedBox(
                       width: 22,
                     ),
-                    Column(
+                    const Column(
                       mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
+                      children: [
                         Padding(
                           padding: EdgeInsets.only(
                             top: 60,
@@ -162,18 +161,14 @@ class Orders extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              kheight,
               const Divider(
                 thickness: 2,
               ),
-              const SizedBox(
-                height: 20,
-              ),
-              Row(
+              kheight,
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
                     'Item Total',
                   ),
@@ -185,9 +180,9 @@ class Orders extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
                     'Delivery',
                   ),
@@ -202,9 +197,9 @@ class Orders extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
                     'Grand Total',
                     style: TextStyle(
@@ -221,14 +216,12 @@ class Orders extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              kheight,
               const Divider(
                 thickness: 2,
               ),
               Padding(
-                padding: EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -239,9 +232,9 @@ class Orders extends StatelessWidget {
                         fontSize: 17,
                       ),
                     ),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         Icon(
                           color: Colors.indigo,
                           Icons.share_outlined,
@@ -258,14 +251,14 @@ class Orders extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
+              const Padding(
+                padding: EdgeInsets.only(top: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Deepa',
                           style: TextStyle(
@@ -282,7 +275,7 @@ class Orders extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         CircleAvatar(
                           backgroundColor: Colors.amber,
                           child: CircleAvatar(
@@ -305,13 +298,13 @@ class Orders extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 20),
                 child: Row(
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Address',
                           style: TextStyle(
@@ -336,15 +329,15 @@ class Orders extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
+              const Padding(
+                padding: EdgeInsets.only(top: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text(
                             'City',
                             style: TextStyle(
@@ -364,7 +357,7 @@ class Orders extends StatelessWidget {
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text(
                             'PinCode',
                             style: TextStyle(
@@ -389,9 +382,9 @@ class Orders extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Payment',
                           style: TextStyle(
@@ -424,19 +417,17 @@ class Orders extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              kheight,
               const Divider(
                 thickness: 2,
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
+              const Padding(
+                padding: EdgeInsets.only(top: 10),
                 child: Row(
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'ADDITIONAL INFORMATION',
                           style: TextStyle(
@@ -449,14 +440,14 @@ class Orders extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
+              const Padding(
+                padding: EdgeInsets.only(top: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'State',
                           style: TextStyle(
@@ -475,14 +466,14 @@ class Orders extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
+              const Padding(
+                padding: EdgeInsets.only(top: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Email',
                           style: TextStyle(

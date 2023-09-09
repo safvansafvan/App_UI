@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Lists/list_manage_store.dart';
+import '../../core/Lists/list_manage_store.dart';
 
 class ManageStore extends StatelessWidget {
   const ManageStore({super.key});
@@ -19,7 +19,7 @@ class ManageStore extends StatelessWidget {
               crossAxisCount: 2, childAspectRatio: 1.2),
           itemBuilder: (context, index) {
             return Container(
-              margin: EdgeInsets.all(8),
+              margin: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10), color: Colors.white),
               child: Padding(
@@ -34,12 +34,12 @@ class ManageStore extends StatelessWidget {
                     Text(
                       contents[index],
                       style: const TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold),
+                          fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                     Text(
                       content[index],
                       style: const TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold),
+                          fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
