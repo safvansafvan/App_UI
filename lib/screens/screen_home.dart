@@ -1,4 +1,3 @@
-import 'package:app_ui/screens/Camera/camera_screen.dart';
 import 'package:app_ui/core/constent.dart';
 import 'package:app_ui/screens/additional_info/additional_information.dart';
 import 'package:app_ui/screens/catalogue/catalogue.dart';
@@ -103,20 +102,6 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Navigator.push(
-            (context),
-            MaterialPageRoute(
-              builder: (context) {
-                return const CameraScreen();
-              },
-            ),
-          );
-        },
-        icon: const Icon(Icons.camera_alt_outlined),
-        label: const Text('Camera'),
       ),
     );
   }
