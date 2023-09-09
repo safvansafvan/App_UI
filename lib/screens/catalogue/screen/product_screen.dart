@@ -1,3 +1,4 @@
+import 'package:app_ui/core/constent.dart';
 import 'package:flutter/material.dart';
 import '../../../core/Lists/list_catalogue.dart';
 
@@ -41,9 +42,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                 height: 400,
                               ),
                             ),
-                            const SizedBox(
-                              width: 10,
-                            ),
+                            kheight,
                             Expanded(
                               child: Column(
                                 mainAxisAlignment:
