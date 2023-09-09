@@ -1,6 +1,8 @@
-import 'package:app_ui/core/constent.dart';
+import 'package:app_ui/screens/payments/widgets/amount_hold_and_recived.dart';
+import 'package:app_ui/screens/payments/widgets/payout_product.dart';
+import 'package:app_ui/screens/payments/widgets/transation_buttons.dart';
+import 'package:app_ui/screens/payments/widgets/transation_container.dart';
 import 'package:flutter/material.dart';
-import '../../core/Lists/list_catalogue.dart';
 
 class Payments extends StatelessWidget {
   const Payments({super.key});
@@ -18,74 +20,7 @@ class Payments extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 10,
-                  right: 10,
-                  top: 20,
-                ),
-                child: Container(
-                  height: 200,
-                  width: 450,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: const BorderRadius.all(Radius.circular(10)),
-                    border: Border.all(color: Colors.grey),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'Transaction Limit',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        kheightTen,
-                        const Text(
-                            'A tree limit upn to which you will receive'),
-                        const Text('the online payments directly in your bank'),
-                        kheightTen,
-                        LinearProgressIndicator(
-                          value: 0.25,
-                          color: Colors.blue[900],
-                        ),
-                        kheightTen,
-                        const Text(
-                          '36,668 left out of ₹50,000',
-                          style: TextStyle(
-                            color: Color(
-                              0xFF363636,
-                            ),
-                          ),
-                        ),
-                        kheightTen,
-                        Container(
-                          height: 35,
-                          width: 125,
-                          decoration: BoxDecoration(
-                              color: Colors.blue[900],
-                              borderRadius: const BorderRadius.all(
-                                Radius.circular(7),
-                              )),
-                          child: TextButton(
-                            onPressed: () {},
-                            child: const Text(
-                              'Increase Limit',
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              const TransationContainer(),
               ListTile(
                 onTap: () {},
                 leading: const Text(
@@ -129,189 +64,13 @@ class Payments extends StatelessWidget {
                 ),
                 trailing: const Icon(Icons.keyboard_arrow_down_rounded),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      height: 90,
-                      width: 150,
-                      decoration: BoxDecoration(
-                        color: Colors.amber[900],
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(15),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              'AMOUNT ON HOLD',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 12),
-                            ),
-                            kheightTen,
-                            const Text('₹0',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                        height: 90,
-                        width: 150,
-                        decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 28, 210, 34),
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                'AMOUNT RECEIVED',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 12),
-                              ),
-                              kheightTen,
-                              const Text(
-                                '₹13,332',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20),
-                              ),
-                            ],
-                          ),
-                        )),
-                  ],
-                ),
-              ),
+              const AmountHoldAndRecivedContainer(),
               const ListTile(
                 title: Text('Transactions',
                     style: TextStyle(fontWeight: FontWeight.bold)),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.grey[350],
-                          borderRadius: BorderRadius.circular(30)),
-                      child: TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'On hold',
-                            style: TextStyle(color: Colors.grey[700]),
-                          )),
-                    ),
-                    Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue[900],
-                            borderRadius: BorderRadius.circular(30)),
-                        child: TextButton(
-                            onPressed: () {},
-                            child: const Text(
-                              'Payouts(15)',
-                              style: TextStyle(color: Colors.white),
-                            ))),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.grey[350],
-                          borderRadius: BorderRadius.circular(30)),
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Refuds',
-                          style: TextStyle(color: Colors.grey[700]),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 1200,
-                child: ListView.separated(
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      leading: ClipRRect(
-                        child: Image.asset(
-                          imagelisttile[index],
-                          height: 50,
-                          width: 60,
-                        ),
-                      ),
-                      title: Wrap(
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                listtiletitle[index],
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.w600),
-                              ),
-                              const SizedBox(
-                                height: 2,
-                              ),
-                              Text(
-                                listTileDateAndTime[index],
-                                style: const TextStyle(color: Colors.grey),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                      subtitle: Text(
-                        listTileSubtitle[index],
-                      ),
-                      trailing: Wrap(
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                listTilePrice[index],
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.blue),
-                              ),
-                              const Wrap(
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.all(2),
-                                    child: Icon(
-                                      Icons.circle,
-                                      size: 15,
-                                      color: Colors.green,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Successful',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.grey),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    );
-                  },
-                  separatorBuilder: (context, index) => const Divider(
-                    thickness: 1,
-                  ),
-                  itemCount: imagelisttile.length,
-                ),
-              ),
+              const TransationButtons(),
+              const PayoutProductsList(),
             ],
           ),
         ),

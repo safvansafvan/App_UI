@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/Lists/list_catalogue.dart';
+import '../../../core/Lists/list_catalogue.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});

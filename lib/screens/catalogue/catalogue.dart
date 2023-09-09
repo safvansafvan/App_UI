@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../products/catagories.dart';
-import '../products/product_screen.dart';
+import 'screen/catagories.dart';
+import 'screen/product_screen.dart';
 
 class Catalogue extends StatelessWidget {
   const Catalogue({super.key});

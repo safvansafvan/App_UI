@@ -8,3 +8,7 @@ var kheight = const SizedBox(
 var kheightTen = const SizedBox(
   height: 10,
 );
+
+var divider = const Divider(
+  thickness: 2,
+);
